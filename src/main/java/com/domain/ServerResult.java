@@ -1,10 +1,18 @@
 package com.domain;
 
-public class ServerResult<T> {
+import java.io.Serializable;
+
+public class ServerResult<T> implements Serializable {
 
     private int code;
     private String message;
-    private T object;
+    private T info;
+
+    public ServerResult(int code, String message, T info) {
+        this.code = code;
+        this.message = message;
+        this.info = info;
+    }
 
     public int getCode() {
         return code;
@@ -22,11 +30,11 @@ public class ServerResult<T> {
         this.message = message;
     }
 
-    public T getObject() {
-        return object;
+    public T getInfo() {
+        return info;
     }
 
-    public void setObject(T object) {
-        this.object = object;
+    public void setInfo(T info) {
+        this.info = info;
     }
 }

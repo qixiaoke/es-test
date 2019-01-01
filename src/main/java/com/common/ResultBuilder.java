@@ -2,13 +2,10 @@ package com.common;
 
 import com.domain.ServerResult;
 
-public class ResultBuilder<T> {
+public class ResultBuilder {
 
-    public static ServerResult build(Object result) {
-        ServerResult serverResult = new ServerResult();
-        serverResult.setCode(200);
-        serverResult.setMessage("SUCCESS");
-        serverResult.setObject(result);
+    public static <T>ServerResult build(T result) {
+        ServerResult serverResult = new ServerResult(200, "SUCCESS", result);
 
         return serverResult;
     }

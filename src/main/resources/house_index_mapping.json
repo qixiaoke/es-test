@@ -1,36 +1,69 @@
 {
-  "settings":{
-    "number_of_replicas":0
+  "settings": {
+    "number_of_replicas": 0
   },
   "mappings":{
     "house":{
-      "dynamic":false,
-      "properties":{
-        "houseId":{
-          "type":"long"
-        },
+      "dynamic": false,
+      "properties": {
         "title":{
-          "type":"text"
+          "type": "text"
         },
-        "price":{
-          "type":"integer"
+        "price": {
+          "type": "integer"
+        },
+        "area": {
+          "type": "integer"
         },
         "createTime":{
-          "type":"date",
-          "format":"strict_date_optional_time||epoch_millis"
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
         },
-        "lastUpdateTime":{
-          "type":"date",
-          "format":"strict_date_optional_time||epoch_millis"
+        "lastUpdateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
         },
-        "cityEnName":{
+        "cityEnName": {
+          "type": "keyword"
+        },
+        "regionEnName": {
           "type":"keyword"
         },
-        "regionEnName":{
+        "direction": {
+          "type": "keyword"
+        },
+        "distanceToSubway": {
+          "type": "integer"
+        },
+        "subwayLineName": {
           "type":"keyword"
         },
-        "tags":{
+        "subwayStationName": {
+          "type": "keyword"
+        },
+        "tag": {
           "type":"text"
+        },
+        "street": {
+          "type":"keyword"
+        },
+        "district": {
+          "type": "keyword"
+        },
+        "description": {
+          "type":"text"
+        },
+        "layoutDesc": {
+          "type": "text"
+        },
+        "traffic": {
+          "type": "text"
+        },
+        "roundService": {
+          "type": "text"
+        },
+        "rentWay":{
+          "type":"integer"
         }
       }
     }
