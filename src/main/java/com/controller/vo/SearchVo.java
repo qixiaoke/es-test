@@ -20,6 +20,9 @@ public class SearchVo {
     // 最大面积
     private Integer maxArea;
 
+    // 小区
+    private String district;
+
     private int page = 0;
 
     private int size = 20;

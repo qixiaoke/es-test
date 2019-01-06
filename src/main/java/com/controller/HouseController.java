@@ -42,6 +42,14 @@ public class HouseController {
         return ResultBuilder.build(houses);
     }
 
+    @GetMapping("/house/agg")
+    public ServerResult addQuery(SearchVo searchVo) {
+
+        long count = houseSerivce.aggQuery(searchVo);
+
+        return ResultBuilder.build(count);
+    }
+
     @Autowired
     private HouseTagDBRepository houseTagDBRepository;
 

@@ -17,4 +17,6 @@ public class HouseFieldKey {
     public static final String AREA = "area";
 
     public static final String DISTRICT = "district";
+
+    public static final String AGG_DISTRICT = "agg_district";
 }

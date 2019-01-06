@@ -6,10 +6,12 @@ import com.domain.House;
 import com.domain.mysql.HouseDB;
 import com.domain.mysql.HouseDetailDB;
 import com.domain.mysql.HouseTagDB;
+import com.fasterxml.jackson.databind.util.ArrayBuilders;
 import com.repository.SearchDao;
 import com.repository.mysql.HouseDBRepository;
 import com.repository.mysql.HouseDetailDBRepository;
 import com.repository.mysql.HouseTagDBRepository;
+import org.apache.lucene.search.BooleanQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -86,6 +88,12 @@ public class HouseSerivce {
         List<House> house = searchDao.query(searchVo);
 
         return house;
+
+    }
+
+    public long aggQuery(SearchVo searchVo) {
+
+        return searchDao.aggDistrictHouse(searchVo.getCityEnName(), searchVo.getRegionEnName(), searchVo.getDistrict());
 
     }
 
