@@ -68,6 +68,7 @@ public class SearchDao {
                     QueryBuilders.multiMatchQuery(searchVo.getKeyWords(),
                             HouseFieldKey.TITLE,
                             HouseFieldKey.TRAFFICE,
+                            HouseFieldKey.DISTRICT,
                             HouseFieldKey.ROUND_SERVICE)
             );
         }

@@ -15,4 +15,6 @@ public class HouseFieldKey {
     public static final String TRAFFICE = "traffic";
 
     public static final String AREA = "area";
+
+    public static final String DISTRICT = "district";
 }
